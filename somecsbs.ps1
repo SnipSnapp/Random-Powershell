@@ -22,7 +22,7 @@ while ($true){
     $IPs | ForEach-Object{
         $meesa = $_ + "/32"
         $meesa
-        new-netroute -DestinationPrefix $meesa -InterfaceIndex $InterfaceIndex[0] -NextHop 127.0.0.1
+        route add $_ mask 255.255.255.255 0.0.0.0 if $InterfaceIndex[0]
      }
             
 }
