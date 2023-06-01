@@ -22,7 +22,7 @@ while ($true){
     $IPs | ForEach-Object{
         $meesa = $_ + "/32"
         $meesa
-        new-netroute -DestinationPrefix $meesa -InterfaceIndex $InterfaceIndex -NextHop "127.0.0.1"
+        new-netroute -DestinationPrefix $meesa -InterfaceIndex $InterfaceIndex[0] -NextHop 127.0.0.1
      }
             
 }
