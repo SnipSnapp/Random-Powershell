@@ -15,7 +15,7 @@ $target_URLs | foreach-object {Invoke-WebRequest -TimeoutSec 1 -uri $_
 $IPs
 
 $InterfaceAlias = "*Loopback*"
-
+route /f
 # Get the loopback interface index
 $InterfaceIndex = (Get-NetIPInterface | Where-Object {$_.InterfaceAlias -like $InterfaceAlias}).InterfaceIndex
 while ($true){
