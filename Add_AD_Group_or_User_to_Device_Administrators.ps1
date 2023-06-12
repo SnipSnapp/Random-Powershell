@@ -3,7 +3,7 @@ Harrison Koll 4/24/2023
 .Synopsis
 Inputfile is the name of the file or list of devices.
 grp_or_usr is the name of the group or user that you want to add to  to add to the local Administrators group.
-This script is only useful when net localgroup or Add-localgroupmember are not available.
+This script is useful when net localgroup or Add-localgroupmember are not available. IE. On legacy devices, it works 100% on the time, tested from Windows 2k on up.
 #>
 param(
     [Parameter(ParameterSetName='Input')]
