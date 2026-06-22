@@ -4,8 +4,6 @@
 # Test on your own network to build detections w/ whatever EDR toolsets you have.  Powershell vs. route methods work.
 # Use with metasploit: modules/post/windows/manage/exec_powershell.rb
 #This is to check if you read the crap you run. But disable IPv6 if you want to kill Microsoft, it uses IPv6 as a fallback
-#Tested EDRs I have informed will not be fixed.
-
 
 $target_URLs = @("CSV String")
 $Regex_Lookups = @()#Fill this in with sites you want to block.
